@@ -1,0 +1,97 @@
+.gmg-sidebar {
+  user-select: none;
+  background: #ffffff;
+  .sidebar {
+    border-right: 0;
+    .removeSelected {
+      color: var(--light-grey-color);
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .ant-menu-light {
+    padding-top: 12px;
+  }
+  .ant-menu-inline .ant-menu-item {
+    margin: 0;
+  }
+  .ant-menu-inline .ant-menu-item::after {
+    left: 0px;
+    right: unset;
+  }
+  .anticon,
+  .anticon + span,
+  .ant-menu-item-only-child {
+    color: var(--light-grey-color);
+    font-family: 'Circular-Std-Book';
+    font-weight: 400;
+  }
+  .ant-menu-item-selected {
+    color: var(--primary-color);
+    .anticon,
+    .anticon + svg {
+      color: var(--primary-color);
+    }
+  }
+  .ant-menu-submenu-arrow {
+    right: 16px;
+    width: 25px;
+    color: var(--light-grey-color);
+  }
+  .ant-menu-submenu-arrow::before,
+  .ant-menu-submenu-arrow::after {
+    height: 0.5px;
+  }
+  .sidebar-menu {
+    font-size: 14px;
+    font-family: var(--font-family);
+    font-weight: bold;
+    a {
+      font-family: var(--font-family) !important;
+      font-size: 14px !important;
+      color: var(--light-grey-color);
+      &::before {
+        font-family: var(--font-family) !important;
+        font-size: 14px !important;
+        color: var(--light-grey-color);
+      }
+    }
+    &:hover {
+      a {
+        color: var(--primary-color) !important;
+        &::before {
+          color: var(--primary-color) !important;
+        }
+      }
+    }
+  }
+  .sub-menu-active {
+    .ant-menu-submenu-title {
+      left: 0px;
+      border-left: 3px solid var(--primary-color);
+      background: #f0fdff;
+      span,
+      i {
+        color: var(--primary-color);
+      }
+    }
+  }
+  .sidebar-btn-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+    cursor: pointer;
+    .activeSidebarMenu {
+      color: var(--primary-color);
+    }
+  }
+  .sidebar-collapse-icon {
+    padding-left: 24px;
+    padding-top: 27px;
+  }
+  .sidebar-collapsed {
+    padding-left: 32px;
+  }
+}
