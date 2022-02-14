@@ -1,2 +1,3 @@
-export const getAssets = ({ limit, page, sortBy, reverse }) => {
+export const getProducts = ({ limit, page, sortBy, reverse }) => {
+  return []
 }

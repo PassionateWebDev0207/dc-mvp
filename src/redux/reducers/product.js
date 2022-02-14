@@ -8,7 +8,7 @@ export const actionTypes = {
   productSetLoadingStatus: 'product/set_loading_status',
 };
 
-export const assetGetAll = createAction(actionTypes.productGetAllRequest)
+export const productGetAll = createAction(actionTypes.productGetAllRequest)
 
 const defaultState = {
   list: [],
