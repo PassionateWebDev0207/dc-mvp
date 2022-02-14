@@ -1,83 +1,33 @@
 import { createSelector } from 'reselect';
 
-const authDomain = (state) => state.auth
-const adminDomain = (state) => state.admin
-const assetDomain = (state) => state.asset
+const productDomain = (state) => state.product
 
-const makeSelectAuthLoading = () => createSelector(
-  authDomain,
-  (subdomain) => subdomain.isLoading,
-);
-
-const makeSelectAuthError = () => createSelector(
-  authDomain,
-  (subdomain) => subdomain.error,
-);
-
-const makeSelectAdminLoading = () => createSelector(
-  adminDomain,
-  (subdomain) => subdomain.isLoading
-)
-
-const makeSelectAdminError = () => createSelector(
-  adminDomain,
-  (subdomain) => subdomain.error
-)
-
-const makeSelectAccounts = () => createSelector(
-  adminDomain,
-  (subdomain) => subdomain.accounts
-)
-
-const makeSelectHistory = () => createSelector(
-  adminDomain,
-  (subdomain) => subdomain.history
-)
-
-const makeSelectAccountsCount = () => createSelector(
-  adminDomain,
-  (subdomain) => subdomain.accountsTotalCount
-)
-
-const makeSelectHistoryCount = () => createSelector(
-  adminDomain,
-  (subdomain) => subdomain.historyTotalCount
-)
-
-const makeSelectAssetLoading = () => createSelector(
-  assetDomain,
+const makeSelectProductLoading = () => createSelector(
+  productDomain,
   (subdomain) => subdomain.isLoading
 )
 
 
-const makeSelectAssetList = () => createSelector(
-  assetDomain,
+const makeSelectProductList = () => createSelector(
+  productDomain,
   (subdomain) => subdomain.list
 )
 
 
-const makeSelectAssetCount = () => createSelector(
-  assetDomain,
+const makeSelectProductCount = () => createSelector(
+  productDomain,
   (subdomain) => subdomain.totalCount
 )
 
 
-const makeSelectAssetError = () => createSelector(
-  assetDomain,
+const makeSelectProductError = () => createSelector(
+  productDomain,
   (subdomain) => subdomain.error
 )
 
 export {
-  makeSelectAuthLoading,
-  makeSelectAuthError,
-  makeSelectAdminLoading,
-  makeSelectAdminError,
-  makeSelectAccounts,
-  makeSelectHistory,
-  makeSelectAccountsCount,
-  makeSelectHistoryCount,
-  makeSelectAssetLoading,
-  makeSelectAssetList,
-  makeSelectAssetCount,
-  makeSelectAssetError,
+  makeSelectProductLoading,
+  makeSelectProductList,
+  makeSelectProductCount,
+  makeSelectProductError,
 };

@@ -1,26 +1,14 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { isAuthenticated } from './service/auth'
-import { Login, Application } from './containers'
-import { PublicRoute } from './components'
+import { Switch, Route } from 'react-router-dom';
+import { Application } from './containers'
 
 const Routes = () => (
   <Switch>
     <Route
       path="/"
       exact
-      render={() => (
-        isAuthenticated()
-          ? (<Redirect to={{ pathname: '/app' }} />)
-          : (<Redirect to={{ pathname: '/login' }} />)
-      )}
+      component={Application}
     />
-    <PublicRoute
-      path="/login"
-      component={Login}
-      exact
-    />
-    <Route path="/app" component={Application} />
   </Switch>
 );
 

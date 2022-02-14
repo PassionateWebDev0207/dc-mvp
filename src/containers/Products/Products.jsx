@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import moment from 'moment'
 import { useDispatch, useSelector } from 'react-redux'
-import { assetGetAll } from '../../redux/reducers/asset'
-import { makeSelectAssetLoading, makeSelectAssetList, makeSelectAssetCount } from '../../redux/selectors'
+import { productGetAll } from '../../redux/reducers/product'
+import { makeSelectProductLoading, makeSelectProductList, makeSelectProductCount } from '../../redux/selectors'
 import { Table } from 'antd'
 import './style.less'
 
-const Asset = () => {
+const Products = () => {
   const dispatch = useDispatch()
-  const loading = useSelector(makeSelectAssetLoading())
-  const list = useSelector(makeSelectAssetList())
-  const totalCount = useSelector(makeSelectAssetCount())
+  const loading = useSelector(makeSelectProductLoading())
+  const list = useSelector(makeSelectProductList())
+  const totalCount = useSelector(makeSelectProductCount())
   const [page, setPage] = useState(1)
   const [limit, setLimit] = useState(10)
 
@@ -81,23 +81,22 @@ const Asset = () => {
     if (sorter.order && sorter.field) {
       sortBy = sorter.field
       reverse = sorter.order === 'ascend'
-      dispatch(assetGetAll({ page: current, limit: pageSize, sortBy, reverse }))
+      dispatch(productGetAll({ page: current, limit: pageSize, sortBy, reverse }))
     } else {
-      dispatch(assetGetAll({ page: current, limit: pageSize }))
+      dispatch(productGetAll({ page: current, limit: pageSize }))
     }
   }
 
   useEffect(() => {
-    dispatch(assetGetAll({ page: 1, limit: 10 }))
+    dispatch(productGetAll({ page: 1, limit: 10 }))
   }, [dispatch])
 
   return (
-    <div className="asset">
-      <div className="asset-header">
-        <span className="title">Asset</span>
+    <div className="product">
+      <div className="product-header">
       </div>
-      <div className="asset-content">
-        <Table
+      <div className="product-content">
+        {/* <Table
           bordered
           dataSource={list.map((item) => ({ ...item, key: item.asset_id }))}
           columns={columns}
@@ -112,10 +111,10 @@ const Asset = () => {
           onChange={handleTableChange}
           scroll={{ x: 'max-content' }}
           size="middle"
-        />
+        /> */}
       </div>
     </div>
   )
 }
 
-export default Asset
+export default Products
