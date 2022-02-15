@@ -1,13 +1,29 @@
-.gmg-header {
+.dc-header {
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  height: 80px;
   background-color: white;
-  border-bottom: 1px solid var(--border-color-base);
-  padding: 0 1rem 0 10px;
+  &--top {
+    width: 100%;
+    height: 38px;
+    background-color: #f6f9ff;
+    padding: 0 135px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .currencies {}
+    .global-menus {}
+  }
+  &--bottom {
+    width: 100%;
+    padding: 34px 135px 48px;
+    background-color: #e5e5e5;
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .additional-categories {}
+  }
 }
 
 .avatar-popover {
