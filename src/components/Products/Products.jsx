@@ -8,12 +8,11 @@ import './style.less'
 const Products = () => {
   const [products, setProducts] = useState([])
   const [page, setPage] = useState(1)
-  const [limit, setLimit] = useState(10)
   const [pageStart, setPageStart] = useState(0)
   const [pageEnd, setPageEnd] = useState(0)
   const [filterOption, setFilterOption] = useState('All Items')
-  const [sortBy, setSortBy] = useState('Price - High to Low')
-  const pageLimitOptions = [10, 25, 50, 100]
+  const limit = 10
+  const sortBy = 'Price - High to Low'
   const filterOptions = ['All Items', 'Best Sellers', 'Features']
 
   const getProductsForCurrentPage = (pageNumber, countPerPage) => {
