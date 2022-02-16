@@ -1,18 +1,15 @@
 import React from 'react'
-import classNames from 'classnames'
-import { Layout as AntLayout } from 'antd'
 import { Products } from '../../containers'
-import { Header } from '../../components'
+import { Header, ShopProfile } from '../../components'
 import './style.less'
-
-const { Content } = AntLayout
 
 const Application = () => {
   return (
-    <AntLayout className="application">
+    <div className="application">
       <Header />
+      <ShopProfile />
       <Products />
-    </AntLayout>
+    </div>
   )
 }
 

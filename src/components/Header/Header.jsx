@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Layout, Image, Button, Input } from 'antd'
+import React, { useState } from 'react'
+import { Image, Button, Input } from 'antd'
 import CurrencyDropdown from '../CurrencyDropdown'
 import Logo from '../../assets/images/Logo.svg'
 import ChatCircle from '../../assets/images/ChatCircle.svg'
@@ -13,13 +13,11 @@ import Heart from '../../assets/images/Heart.svg'
 import Percent from '../../assets/images/Percent.svg'
 import './style.less'
 
-const AntHeader = Layout.Header
-
 const Header = () => {
   const categoryList = ['Black Friday', 'Electronics', 'Fashion', 'Health & Garden', 'Sports', 'Collectibles and Arts', 'Industrial equipment', 'Toys & Hobbies']
   const [category, setCategory] = useState('Black Friday')
   return (
-    <AntHeader className="dc-header">
+    <div className="dc-header">
       <div className="dc-header--top">
         <div className="dc-container dc-h-100 d-flex justify-space-between align-center">
           <div className="currencies">
@@ -99,7 +97,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </AntHeader>
+    </div>
   )
 }
 

@@ -1,0 +1,96 @@
+.shop-profile-container {
+  .shop-background {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 170px;
+  }
+  .shop-profile {
+    padding: 48px 0;
+    background-color: #f6f9ff;
+    &--top {
+      .shop-logo {
+        width: 180px;
+        height: 180px;
+      }
+      .shop-information {
+        margin-left: 32px;
+        .shop-follow {
+          margin-bottom: 16px;
+          .title {
+            span {
+              font-size: 40px;
+              line-height: 40px;
+              font-weight: 600;
+              color: var(--text-color);
+              margin-right: 8px;
+            }
+          }
+          button {
+            width: 170px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 600;
+          }
+        }
+        .shop-contact {
+          &--item {
+            margin-right: 16px;
+            cursor: pointer;
+            span {
+              font-size: 14px;
+              line-height: 16px;
+              font-weight: 400;
+              color: var(--primary-color);
+              margin-left: 8px;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    &--bottom {
+      margin-top: 32px;
+      .shop-detail {
+        &--item {
+          margin-right: 70px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            margin-right: 16px;
+          }
+
+          .info {
+            .label {
+              color: var(--text-color-secondary);
+              font-size: var(--font-size-base);
+              line-height: 16px;
+              font-weight: 400;
+              margin-bottom: 8px;
+            }
+            .content {
+              font-size: 18px;
+              line-height: 24px;
+              font-weight: 400;
+              color: var(--text-color);
+
+              .ant-image {
+                margin-right: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
