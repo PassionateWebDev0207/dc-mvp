@@ -1,6 +1,6 @@
 import React from 'react'
 import { Products } from '../../containers'
-import { Header, ShopProfile, Features } from '../../components'
+import { Header, ShopProfile, Features, Footer } from '../../components'
 import './style.less'
 
 const Application = () => {
@@ -10,6 +10,7 @@ const Application = () => {
       <ShopProfile />
       <Products />
       <Features />
+      <Footer />
     </div>
   )
 }
