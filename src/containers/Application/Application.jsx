@@ -1,6 +1,5 @@
 import React from 'react'
-import { Products } from '../../containers'
-import { Header, ShopProfile, Features, Footer } from '../../components'
+import { Header, ShopProfile, Features, Footer, Products } from '../../components'
 import './style.less'
 
 const Application = () => {
