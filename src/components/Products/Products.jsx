@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { Input, Button, Image, Rate, Pagination } from 'antd'
+import { Input, Button, Image, Pagination } from 'antd'
+import Rating from 'react-rating'
 import { products as allProducts } from '../../assets/products/products'
 import CaretDown from '../../assets/images/CaretDown.svg'
 import CaretDownPrimary from '../../assets/images/CaretDownPrimary.svg'
+import Star from '../../assets/images/Star.svg'
+import EmptyStar from '../../assets/images/EmptyStar.svg'
+import HeartPrimary from '../../assets/images/HeartPrimary.svg'
 import './style.less'
+
+const RateFullSymbol = () => <Image src={Star} preview={false} />
+const RateEmptySymbol = () => <Image src={EmptyStar} preview={false} />
 
 const Products = () => {
   const [products, setProducts] = useState([])
@@ -61,13 +68,25 @@ const Products = () => {
       <div className="products-container dc-container">
         {products.map((product, index) => (
           <div className="product" key={`product-item-${index}`}>
-            <div className="logo" style={{ backgroundImage: `url(${product.image})` }} />
+            <div className="logo" style={{ backgroundImage: `url(${product.image})` }}>
+              <Image src={HeartPrimary} preview={false} />
+            </div>
             <div className="tags d-flex">
               <div className="tag sales">{product.sales}%</div>
               <div className="tag free-shipping">Free Shipping</div>
             </div>
-            <div className="reviews">
-              <Rate value={product.overallRating} />
+            <div className="reviews d-flex align-center">
+              <div className="rating">
+                <div className="stars-container">
+                  <Rating
+                    className="stars"
+                    initialRating={product.overallRating}
+                    fullSymbol={<RateFullSymbol />}
+                    emptySymbol={<RateEmptySymbol />}
+                    readonly
+                  />
+                </div>
+              </div>
               <span className="content">{`${product.reviews} Review`}</span>
             </div>
             <div className="title">

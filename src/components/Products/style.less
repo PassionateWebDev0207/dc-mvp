@@ -83,6 +83,7 @@
     .product {
       width: 100%;
       .logo {
+        position: relative;
         padding-top: 100%;
         background-color: #f6f9ff;
         background-position: center center;
@@ -90,6 +91,12 @@
         background-repeat: no-repeat;
         border-radius: 10px;
         margin-bottom: 16px;
+
+        > div {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+        }
       }
       .tags {
         margin-bottom: 8px;
@@ -98,6 +105,9 @@
           margin-right: 8px;
           border-radius: 2px;
           color: white;
+          font-family: var(--font-family);
+          font-size: 16px;
+          line-height: 18px;
 
           &:last-child {
             margin-right: 0;
@@ -113,13 +123,28 @@
       }
       .reviews {
         margin-bottom: 8px;
-        .ant-rate {
-          color: #ff8a00;
-          .ant-rate-star {
-            margin-right: 4px;
+        height: 18px;
+        .rating {
+          width: 106px;
+          height: 18px;
+          position: relative;
+          .stars-container {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            .stars {
+              > span {
+                margin-right: 4px;
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
           }
         }
         .content {
+          display: inline-block;
           margin-left: 4px;
           font-family: var(--font-family);
           font-size: var(--font-size-base);
@@ -134,7 +159,15 @@
         line-height: 22.4px;
         color: var(--text-color);
         a {
+          font-size: 16px;
+          line-height: 22.4px;
+          color: var(--text-color);
           text-decoration: underline;
+          color: var(--text-color);
+        }
+        span {
+          font-size: 16px;
+          line-height: 22.4px;
           color: var(--text-color);
         }
       }
@@ -152,7 +185,6 @@
           line-height: 16.8px;
           color: var(--text-color);
           margin-left: 6px;
-          // text-decoration: line-through;
           text-decoration-line: line-through;
         }
       }
@@ -188,6 +220,7 @@
       }
       .ant-pagination-item-active {
         background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
         a {
           color: white;
         }
