@@ -9,9 +9,9 @@
       .ant-btn {
         width: 111px;
         height: 40px;
+        font-family: var(--font-family-secondary);
         font-size: 16px;
         line-height: 18px;
-        font-weight: 600;
         color: white;
         border: none;
         border-radius: 0 4px 4px 0;
@@ -22,13 +22,13 @@
         border: none;
         border-radius: 4px 0 0 4px;
         padding: 11px 20px;
+        font-family: var(--font-family);
         font-size: 16px;
-        font-weight: 400;
         line-height: 18px;
         color: var(--text-color);
         &::placeholder {
+          font-family: var(--font-family);
           font-size: 16px;
-          font-weight: 400;
           line-height: 18px;
           color: var(--text-color);
           opacity: 0.6;
@@ -41,9 +41,9 @@
         width: auto;
         height: 40px;
         padding: 11px 16px;
+        font-family: var(--font-family);
         font-size: 16px;
         line-height: 18px;
-        font-weight: 400;
         color: var(--text-color-secondary);
         border: 1px solid #eaecf4;
         border-radius: 2px;
@@ -53,7 +53,7 @@
           margin-right: 0;
         }
         &.selected {
-          font-weight: 600;
+          font-family: var(--font-family-secondary);
           border: 1px solid var(--primary-color);
           color: var(--text-color);
         }
@@ -61,9 +61,9 @@
     }
     .sort {
       height: 40px;
+      font-family: var(--font-family-secondary);
       font-size: 16px;
       line-height: 18px;
-      font-weight: 600;
       cursor: pointer;
       .label {
         color: var(--text-color);
@@ -121,17 +121,17 @@
         }
         .content {
           margin-left: 4px;
+          font-family: var(--font-family);
           font-size: var(--font-size-base);
-          font-weight: 400;
           line-height: 18px;
           color: var(--primary-color);
         }
       }
       .title {
         margin-bottom: 8px;
+        font-family: var(--font-family-secondary);
         font-size: 16px;
         line-height: 22.4px;
-        font-weight: 400;
         color: var(--text-color);
         a {
           text-decoration: underline;
@@ -141,24 +141,27 @@
       .cost {
         margin-bottom: 8px;
         .current-cost {
+          font-family: var(--font-family-secondary);
           font-size: 20px;
           line-height: 24px;
           color: #f45351;
         }
         .origin-cost {
+          font-family: var(--font-family);
           font-size: 14px;
           line-height: 16.8px;
           color: var(--text-color);
           margin-left: 6px;
-          text-decoration: line-through;
+          // text-decoration: line-through;
+          text-decoration-line: line-through;
         }
       }
       .buy {
         width: 100%;
         button {
           height: 40px;
+          font-family: var(--font-family-secondary);
           font-size: 16px;
-          font-weight: 600;
           line-height: 18px;
         }
       }
@@ -167,17 +170,17 @@
   &-pagination {
     margin-top: 32px;
     .status {
+      font-family: var(--font-family);
       font-size: 16px;
       line-height: 24px;
       color: var(--text-color);
-      font-weight: 400;
     }
     .control {
       .ant-pagination-item {
         border-radius: 4px;
         border: 1px solid #eaecf4;
+        font-family: var(--font-family);
         font-size: 14px;
-        font-weight: 400;
         a {
           color: var(--text-color-secondary);
           height: 100%;
@@ -192,16 +195,16 @@
       .ant-pagination-item-link {
         border-radius: 4px;
         border: 1px solid #eaecf4;
+        font-family: var(--font-family);
         font-size: 14px;
-        font-weight: 400;
       }
     }
     .size-options {
       span {
+        font-family: var(--font-family);
         font-size: 16px;
         line-height: 24px;
         color: var(--text-color);
-        font-weight: 400;
         margin-right: 10px;
       }
     }
